@@ -238,7 +238,7 @@ function displayProjects () {
             $(".project-entry:last").append(formattedImage);
         }
     }
-};
+}
 
 displayProjects();
 
@@ -276,7 +276,7 @@ displayProjects();
         var formattedOnlineURL = HTMLonlineURL.replace("%data%",education.onlineCourses[j].url);
         $(".education-entry:last").append(formattedOnlineURL);
     }
-};
+}
 
 displaySchools();
 
