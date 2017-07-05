@@ -106,3 +106,4 @@ The resume has four distinct sections: work, education, projects and a header wi
 6. It’s possible to make additional information show up when you click on the pins in the map. Check out line 174 in helper.js and the Google Maps API to get started.
 # Udacity-Resume
 # uda-res
+# uda-res
