@@ -5,15 +5,15 @@ This is empty on purpose! Your code to build the resume will go here.
 var bio = {
     "name": "Kalana Agalakotuwa",
     "role": "Web Developer",
-    "contactInfo": {
+    "contacts": {
         "phone": "701-203-2177",
         "email": "kalana1on1@gmail.com",
-        "GitHub": "https://github.com/kalana1985",
+        "gitHub": "https://github.com/kalana1985",
         "Linkdin": "https://www.linkedin.com/in/kalana-agalakotuwa-86385430/",
         "twitter": "https://twitter.com/kalana1on1",
-        "Location": "Grand Forks,ND,USA"
+        "location": "Grand Forks,ND,USA"
     },
-    "bioPic": "images/IMG_2434.PNG",
+    "biopic": "images/IMG_2434.PNG",
     "welcomeMessage": "Hi, Im a Front-end Web Developer. Thanks for stoping by my resume ! ",
     "skills": [
         "MIcrosoft Office", "HTML", "CSS", "Bootstrap", "Grunt", "Git & GitHub", "JavaScript",
@@ -36,7 +36,7 @@ var education = {
             "location": "Kandy, Sri Lanka",
             "degree": "High School Diploma",
             "major": "Science",
-            "dates": 2006,
+            "dates": "2006",
             "url": "http://www.wssck.sch.lk/"
         },
         {
@@ -44,7 +44,7 @@ var education = {
             "location": "Thief River Falls, MN",
             "degree": "AAS",
             "major": "Aircraft maintenance technology",
-            "dates": 2015,
+            "dates": "2015",
             "url": "http://www.northlandcollege.edu/",
         }
     ],
@@ -52,16 +52,16 @@ var education = {
 
         {
             "title": "Front-end Devaloper Nano degree",
-            "School": "Udacity",
-            "dates": 2017,
+            "school": "Udacity",
+            "dates": "2017",
             "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         },
 
         {
 
             "title": "Full Stack JavaScript",
-            "School": "TreeHouse",
-            "dates": 2017,
+            "school": "TreeHouse",
+            "dates": "2017",
             "url": "https://teamtreehouse.com/tracks/full-stack-javascript"
         }
     ]
@@ -75,7 +75,7 @@ var work = {
             "location": "Singapore",
             "title": "Assistant manager",
             "dates": "03/2010 - 09/2011",
-            "discription": "Answered an average about 10 to 20 calls per day by addressing customer inquiries" + "," +
+            "description": "Answered an average about 10 to 20 calls per day by addressing customer inquiries" + "," +
                 "solving problems and Providing newer product information.Divided cargo received by account number and intended." +
                 " Gathered logged and monitored all shipping data.Led warehouse improvement initiatives to advance operational efficiencies.Made strategic decisions regarding future targets.Supervised social media marketing strategies."
         },
@@ -85,7 +85,7 @@ var work = {
             "location": "Thief River Falls, MN",
             "title": "PDC Order Fulfillment Team Member",
             "dates": "10/2012 - 09/2015",
-            "discription": "Pick parts in an assigned zone Quickly and accuratelyInspect quality of the product before prepackaging Shipping (processing).Act as a liaison between Sales, customer service, and PDC.Handle customer change order request when applicable Bagged, boxed or gift-wrapped sold merchandise per customer's request.Investigated and resolved customer inquiries and complaints in a timely manner"
+            "description": "Pick parts in an assigned zone Quickly and accuratelyInspect quality of the product before prepackaging Shipping (processing).Act as a liaison between Sales, customer service, and PDC.Handle customer change order request when applicable Bagged, boxed or gift-wrapped sold merchandise per customer's request.Investigated and resolved customer inquiries and complaints in a timely manner"
         },
         {
 
@@ -93,7 +93,7 @@ var work = {
             "location": "Grand Forks, ND",
             "title": "Production Technician",
             "dates": "01/2016 - 06/2016",
-            "discription": "Removes any debris from the mold surface and prepare it for the gel coat application process After gel coat has been applied, they begin to lay the layers of fiberglass. Once the materials have been properly combined they prepare to infuse the blade with resin.Completed company leadership training program."
+            "description": "Removes any debris from the mold surface and prepare it for the gel coat application process After gel coat has been applied, they begin to lay the layers of fiberglass. Once the materials have been properly combined they prepare to infuse the blade with resin.Completed company leadership training program."
         },
         {
 
@@ -101,7 +101,7 @@ var work = {
             "location": "Grand Forks, ND",
             "title": "IT Technician",
             "dates": "11/2015 - Current",
-            "discription": "Maintain computers and CTP printers mixing the chemicals incorrect ratio with appropriate PPE. Monitor development of News pages regularly and update system accordingly. Maintain Communication with Downtown Office in regular basis when printing underway.Maintained friendly and professional customer interactions at all times."
+            "description": "Maintain computers and CTP printers mixing the chemicals incorrect ratio with appropriate PPE. Monitor development of News pages regularly and update system accordingly. Maintain Communication with Downtown Office in regular basis when printing underway.Maintained friendly and professional customer interactions at all times."
         }
     ]
 };
@@ -139,7 +139,7 @@ $("#header").prepend(formattedName);
 
 
 
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 $("#header").append(formattedBioPic);
 
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -150,17 +150,17 @@ $("#header").append(formattedWelcomeMsg);
 //adding contact
 
 
-var formattedContactInfo = [];
-formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contactInfo.phone));
-formattedContactInfo.push(HTMLemail.replace("%data%", bio.contactInfo.email));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contactInfo.GitHub));
-formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contactInfo.twitter));
-formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contactInfo.Location));
+var formattedContacts = [];
+formattedContacts.push(HTMLmobile.replace("%data%", bio.contacts.phone));
+formattedContacts.push(HTMLemail.replace("%data%", bio.contacts.email));
+formattedContacts.push(HTMLgithub.replace("%data%", bio.contacts.gitHub));
+formattedContacts.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+formattedContacts.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
-for (i = 0; i < formattedContactInfo.length; i++) {
-    $("#topContacts").append(formattedContactInfo[i]);
-    $("#footerContacts").append(formattedContactInfo[i]);
+for (i = 0; i < formattedContacts.length; i++) {
+    $("#topContacts").append(formattedContacts[i]);
+    $("#footerContacts").append(formattedContacts[i]);
 }
 /*
 for(contact in formattedContactInfo) {
@@ -190,10 +190,10 @@ for (i = 0; i < bio.skills.length; i++) {
 
 //adding work
 
+ work.display=function(){
+//function displayWork() {
 
-function displayWork() {
-
-    //if(work.jobs.length > 0) {
+    
 
     $("#workExperience").append(HTMLworkStart);
     for (i = 0; i < work.jobs.length; i++) {
@@ -202,7 +202,7 @@ function displayWork() {
         var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
         var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
         var formattedDatesWorked = HTMLworkDates.replace("%data%", work.jobs[i].dates);
-        var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].discription);
+        var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 
         var formattedEmployerWorkTitle = formattedEmployer + formattedWorkTitle;
 
@@ -216,11 +216,11 @@ function displayWork() {
 
 }
 
-displayWork();
+work.display();
 
 //display projects
 
-function displayProjects () {
+projects.display=function() {
     for(var i = 0 ; i < projects.projects.length ; i++) {
         $("#projects").append(HTMLprojectStart);
 
@@ -240,11 +240,11 @@ function displayProjects () {
     }
 }
 
-displayProjects();
+projects.display();
 
 //adding education 
 
-  function displaySchools () {
+  education.display=function () {
     for(var i = 0 ; i < education.schools.length ; i++) {
         $("#education").append(HTMLschoolStart);
 
@@ -267,7 +267,7 @@ displayProjects();
     for(var j = 0 ; j < education.schools.length ; j++) {
         $("#education").append(HTMLschoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[j].title);
-        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[j].School);
+        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[j].school);
         $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
 
         var formattedOnlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[j].dates);
@@ -278,6 +278,7 @@ displayProjects();
     }
 }
 
-displaySchools();
+education.display();
 
 $("#mapDiv").append(googleMap);
+
