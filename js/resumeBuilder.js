@@ -214,7 +214,7 @@ for (i = 0; i < bio.skills.length; i++) {
 
 
 
-}
+};
 
 work.display();
 
@@ -238,7 +238,7 @@ projects.display=function() {
             $(".project-entry:last").append(formattedImage);
         }
     }
-}
+};
 
 projects.display();
 
@@ -276,7 +276,7 @@ projects.display();
         var formattedOnlineURL = HTMLonlineURL.replace("%data%",education.onlineCourses[j].url);
         $(".education-entry:last").append(formattedOnlineURL);
     }
-}
+};
 
 education.display();
 
