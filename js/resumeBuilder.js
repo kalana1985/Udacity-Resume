@@ -36,7 +36,7 @@ var education = {
             "name": "Sri Sumangala college",
             "location": "Kandy, Sri Lanka",
             "degree": "High School Diploma",
-            "majors": "Science",
+            "majors": ["Science"],
             "dates": "2006",
             "url": "http://www.wssck.sch.lk/"
         },
@@ -44,7 +44,7 @@ var education = {
             "name": "Northland Community and Technical College",
             "location": "Thief River Falls, MN",
             "degree": "AAS",
-            "majors": "Aircraft maintenance technology",
+            "majors": ["Aircraft maintenance technology"],
             "dates": "2015",
             "url": "http://www.northlandcollege.edu/",
         }
@@ -121,7 +121,7 @@ var projects = {
             "title": "Framework",
             "dates": "April,2017",
             "description": "In this project I mocked another PDF file, I create my own 12-colum CSS framework." +
-                "It's a fully responsive web page with couple of breakpoints to be compatible with various devices",
+                "It's a fully responsive web page with couple of breakpoints using Media Queries to be compatible with various devices",
             "images": ["images/responsive.png"]
         }
     ]
@@ -286,3 +286,20 @@ education.display = function() {
 education.display();
 
 $("#mapDiv").append(googleMap);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
